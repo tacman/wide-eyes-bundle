@@ -1,12 +1,12 @@
 name: "Continuous Integration"
 
 on:
-    pull_request: null
+  [push, pull_request]
 
 jobs:
     phpunit:
         name: "PHPUnit"
-        runs-on: "ubuntu-20.04"
+        runs-on: "ubuntu-latest"
 
         strategy:
             matrix:
