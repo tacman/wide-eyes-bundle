@@ -19,10 +19,10 @@ readonly class Detection
 
     public static function fromArray(array $detectionResult): Detection
     {
-        Assert::notNull($detectionResult['label']);
-        Assert::notNull($detectionResult['featureId']);
-        Assert::notNull($detectionResult['bbox']);
-        Assert::notNull($detectionResult['point']);
+        Assert::notNull($detectionResult['label'] ?? null);
+        Assert::notNull($detectionResult['featureId'] ?? null);
+        Assert::notNull($detectionResult['bbox'] ?? null);
+        Assert::notNull($detectionResult['point'] ?? null);
 
         return new self(
             $detectionResult['label'],

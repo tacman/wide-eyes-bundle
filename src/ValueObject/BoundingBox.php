@@ -18,10 +18,10 @@ readonly class BoundingBox
 
     public static function fromArray(array $bboxResponse): BoundingBox
     {
-        Assert::notNull($bboxResponse['x1']);
-        Assert::notNull($bboxResponse['y1']);
-        Assert::notNull($bboxResponse['x2']);
-        Assert::notNull($bboxResponse['y2']);
+        Assert::notNull($bboxResponse['x1'] ?? null);
+        Assert::notNull($bboxResponse['y1'] ?? null);
+        Assert::notNull($bboxResponse['x2'] ?? null);
+        Assert::notNull($bboxResponse['y2'] ?? null);
 
         return new self(
             (float) $bboxResponse['x1'],

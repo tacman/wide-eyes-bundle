@@ -16,8 +16,8 @@ readonly class Point
 
     public static function fromArray(array $pointResponse): Point
     {
-        Assert::notNull($pointResponse['x']);
-        Assert::notNull($pointResponse['y']);
+        Assert::notNull($pointResponse['x'] ?? null);
+        Assert::notNull($pointResponse['y'] ?? null);
 
         return new self(
             (float) $pointResponse['x'],
