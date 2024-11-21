@@ -35,7 +35,10 @@
         ],
         "post-update-cmd": [
             "GrumPHP\\Composer\\DevelopmentIntegrator::integrate"
-        ]
+        ],
+        "phpunit-base": "vendor/bin/phpunit",
+        "phpunit": "@phpunit-base --testdox",
+        "coverage": "@phpunit-base --coverage-html html"
     },
     "extra": {
         "grumphp": {
