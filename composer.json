@@ -38,7 +38,7 @@
         ],
         "phpunit-base": "vendor/bin/phpunit",
         "phpunit": "@phpunit-base --testdox",
-        "coverage": "@phpunit-base --coverage-html html"
+        "coverage": "@phpunit-base --coverage-html coverage"
     },
     "extra": {
         "grumphp": {

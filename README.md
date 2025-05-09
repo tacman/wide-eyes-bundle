@@ -2,10 +2,12 @@
 Wide Eyes integration for Symfony.  
 Documentation of the API can be found here: https://wideeyes.ai/.
 
+Tac's notes: thorough testing.  
+
 ## Installation
 
 * install with Composer
-```
+```bash
 composer require answear/wide-eyes-bundle
 ```
 
@@ -36,8 +38,8 @@ use Answear\WideEyesBundle\Service\SimilarClient;
 $similarResponse = $similarClient->getSimilar('uid', 'country');
 ```
 
-Your agruments are: `uid` - your unique id for product and `country` - country for which products your asking.
-In result you're getting `SimilarResponse` that has `getUids` method - with similar uids returned by api.
+Your arguments are: `uid` - your unique id for product and `country` - country for which products your asking.
+In `result` you're getting `SimilarResponse` that has `getUids` method - with similar uids returned by api.
 
 ### Search by image
 
@@ -53,7 +55,7 @@ use Answear\WideEyesBundle\Service\SearchByImageClient;
 $detectAndFeturesResponse = $searchByImageClient->getSimilar('url');
 ```
 
-Your agrument is: `url` - url to the image on which you want to detect products and features.
+Your argument is: `url` - url to the image on which you want to detect products and features.
 In result you're getting `DetectAndFeaturesResponse` that contains all detection returned by api.
 
 #### Search by feature
@@ -66,7 +68,7 @@ use Answear\WideEyesBundle\Service\SearchByImageClient;
 $detectAndFeturesResponse = $searchByImageClient->searchByFeature('featureId', 'label', 'gender', 'filters', 'maxNumResults');
 ```
 
-Your agruments are:
+Your arguments are:
  * `featureId` - featureId you got form DetectAndFeatures
  * `label` - label you got form DetectAndFeatures
  * `gender` - gender you got from DetectAndFeatures (optional)
