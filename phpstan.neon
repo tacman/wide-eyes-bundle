@@ -3,6 +3,13 @@ includes:
 
 parameters:
     level: 5
+#  Line   Response/GetSimilarResponse.php
+# ------ --------------------------------------------------------------------------------------------------------------------------------------------
+#  17     Call to static method Webmozart\Assert\Assert::allString() with array<string> will always evaluate to true.
+#         🪪  staticMethod.alreadyNarrowedType
+#         💡 Because the type is coming from a PHPDoc, you can turn off this check by setting treatPhpDocTypesAsCertain: false in your phpstan.neon.
+
+    treatPhpDocTypesAsCertain: false
     paths:
         - %rootDir%/../../../src
     ignoreErrors:
